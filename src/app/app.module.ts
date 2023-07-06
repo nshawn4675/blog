@@ -10,11 +10,21 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { HomeComponent } from './home/home.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { AboutComponent } from './about/about.component';
+import { LeetcodeComponent } from './leetcode/leetcode.component';
+import { DiaryComponent } from './diary/diary.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    HomeComponent,
+    PortfolioComponent,
+    AboutComponent,
+    LeetcodeComponent,
+    DiaryComponent
   ],
   imports: [
     BrowserModule,
