@@ -5,6 +5,7 @@ import { LeetcodeComponent } from './leetcode/leetcode.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { AboutComponent } from './about/about.component';
 import { DiaryComponent } from './diary/diary.component';
+import { BreatheHoldTrainingAppComponent } from './breathe-hold-training-app/breathe-hold-training-app.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'portfolio', component: PortfolioComponent },
   { path: 'about', component: AboutComponent },
   { path: 'diary', component: DiaryComponent },
+  { path: 'portfolio/breathe-hold-training-app', component: BreatheHoldTrainingAppComponent },
 ];
 
 @NgModule({

@@ -5,23 +5,23 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="home" class="with-icon">
+      <a mat-list-item routerLink="home" (click)="onSelect('Home')">
         <mat-icon matListItemIcon>home</mat-icon>
         <span>Home</span>
       </a>
-      <a mat-list-item routerLink="leetcode">
+      <a mat-list-item routerLink="leetcode" (click)="onSelect('LeetCode')">
         <mat-icon matListItemIcon>code</mat-icon>
         <span>LeetCode</span>
       </a>
-      <a mat-list-item routerLink="portfolio">
+      <a mat-list-item routerLink="portfolio" (click)="onSelect('Portfolio')">
         <mat-icon matListItemIcon>handyman</mat-icon>
         <span>Portfolio</span>
       </a>
-      <a mat-list-item routerLink="diary">
+      <a mat-list-item routerLink="diary" (click)="onSelect('Diary')">
         <mat-icon matListItemIcon>photolibrary</mat-icon>
         <span>Diary</span>
       </a>
-      <a mat-list-item routerLink="about">
+      <a mat-list-item routerLink="about" (click)="onSelect('About')">
         <mat-icon matListItemIcon>info</mat-icon>
         <span>About</span>
       </a>
@@ -37,9 +37,12 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>blog</span>
+      <span>{{selected}}</span>
     </mat-toolbar>
     <!-- Add Content Here -->
-    <router-outlet></router-outlet>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+    
   </mat-sidenav-content>
 </mat-sidenav-container>
